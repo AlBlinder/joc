@@ -21,5 +21,10 @@ limit_top = -300
 limit_bottom = 300
 
 [node name="Label" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+anchor_right = 0.092
+margin_left = -21.0
+margin_top = -48.0
+margin_right = 21.0
+margin_bottom = -33.0
+align = 1
+valign = 1
