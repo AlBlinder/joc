@@ -18,7 +18,7 @@ func _process(delta):
 	
 	moviment += gravetat * delta
 #	moviment.x = Input.get_axis("ves_esquerra", "ves_dreta") * velocitat
-	if combustible > 0:
+	if combustible > 0 and contador == 0:
 		$Label.text = str(combustible/10)
 		contador = 0
 		if Input.is_action_pressed("ves_dalt"):
@@ -27,5 +27,12 @@ func _process(delta):
 	elif combustible < 0:
 		$Label.text = "espera " + str(contador)
 		contador += 1
+		if Input.is_action_just_pressed("ves_dalt"):
+			moviment += salt 
+			combustible += 10
+			if combustible == 1000: contador = 1 
 	moviment = move_and_slide(moviment + dreta * delta, Vector2(0,-1))
+
+
+
 #	pass
