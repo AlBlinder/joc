@@ -3,9 +3,9 @@ extends KinematicBody2D
 
 var velocitat := 500
 var moviment := Vector2.ZERO
-var gravetat := Vector2.DOWN * 3000
+var gravetat := Vector2.DOWN * 1500
 var salt := Vector2.UP * 70
-var dreta := Vector2.RIGHT * 100
+var dreta := Vector2.RIGHT * 30
 var combustible := 1000
 var contador := 0
 # Called when the node enters the scene tree for the first time.
@@ -24,13 +24,13 @@ func _process(delta):
 		if Input.is_action_pressed("ves_dalt"):
 			moviment += salt 
 			combustible -= 1
-	elif combustible < 0:
-		$Label.text = "espera " + str(contador)
-		contador += 1
-		if Input.is_action_just_pressed("ves_dalt"):
-			moviment += salt 
-			combustible += 10
-			if combustible == 1000: contador = 1 
+	else:
+		$Label.text = str(combustible/10)
+		contador = 1
+		combustible += 3
+		if Input.is_action_just_pressed("ves_dalt") and is_on_floor():
+			moviment += salt * 15 
+		if combustible == 1002: contador = 0 
 	moviment = move_and_slide(moviment + dreta * delta, Vector2(0,-1))
 
 

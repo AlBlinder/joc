@@ -14,10 +14,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -19.0
-margin_top = 37.0
-margin_right = -11.0
-margin_bottom = 936.0
+margin_left = -29.0
+margin_top = 49.0
+margin_right = -17.0
+margin_bottom = 948.0
 color = Color( 1, 0.835294, 0.501961, 1 )
 
 [node name="ColorRect2" type="ColorRect" parent="Personatge"]
@@ -25,19 +25,19 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 11.0
-margin_top = 37.0
-margin_right = 19.0
-margin_bottom = 950.0
+margin_left = 17.0
+margin_top = 49.0
+margin_right = 29.0
+margin_bottom = 962.0
 color = Color( 1, 0.835294, 0.501961, 1 )
 
 [node name="Terra" parent="." instance=ExtResource( 3 )]
-position = Vector2( 10000, 312 )
-scale = Vector2( 500, 1 )
+position = Vector2( 1.99948e+06, 312 )
+scale = Vector2( 100000, 1 )
 
 [node name="Terra2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 9998, -313 )
-scale = Vector2( 500, 1 )
+position = Vector2( 1.99947e+06, -313 )
+scale = Vector2( 100000, 1 )
 
 [node name="Paret" parent="." instance=ExtResource( 2 )]
 position = Vector2( 576, -273 )
