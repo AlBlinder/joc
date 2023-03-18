@@ -1,13 +1,48 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Personatge_principal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Paret.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Terra2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Node2D.gd" type="Script" id=4]
+[ext_resource path="res://Area2D.gd" type="Script" id=5]
+[ext_resource path="res://Paret.gd" type="Script" id=6]
+[ext_resource path="res://Fire-Flame-PNG-Image-Background.png" type="Texture" id=7]
+[ext_resource path="res://StaticBody2D.gd" type="Script" id=8]
+
+[sub_resource type="Theme" id=1]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 20, 20 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 20.0249, 20.6 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 23.25, 15.6667 )
+
+[sub_resource type="PhysicsMaterial" id=5]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 40, 32 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 88, 64.8 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="vides" type="Label" parent="."]
+margin_left = -200.0
+margin_top = -250.0
+margin_right = -18.0
+margin_bottom = -196.0
+rect_scale = Vector2( 2, 2 )
+theme = SubResource( 1 )
+text = "Vides: 5"
+valign = 1
+uppercase = true
 
 [node name="Personatge" parent="." instance=ExtResource( 1 )]
-position = Vector2( -13, 5 )
 
 [node name="ColorRect" type="ColorRect" parent="Personatge"]
 anchor_left = 1.0
@@ -35,21 +70,878 @@ color = Color( 1, 0.835294, 0.501961, 1 )
 position = Vector2( 1.99948e+06, 312 )
 scale = Vector2( 100000, 1 )
 
+[node name="Terra3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -500, 0 )
+scale = Vector2( 1, 16 )
+
 [node name="Terra2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1.99947e+06, -313 )
 scale = Vector2( 100000, 1 )
 
 [node name="Paret" parent="." instance=ExtResource( 2 )]
-position = Vector2( 576, -273 )
+position = Vector2( 927, 194 )
+scale = Vector2( 20, 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret/Area2D3"]
+position = Vector2( -5.32492, 1.2 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
 
 [node name="Paret2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 2095, 191 )
-scale = Vector2( 1, 5 )
+position = Vector2( 1700, -130 )
+rotation = -0.287979
+scale = Vector2( 4, 10 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret2"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret2"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret2/Area2D3"]
+position = Vector2( -6.16132, -0.834324 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
 
 [node name="Paret3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 8558, -195 )
-scale = Vector2( 1, 5 )
+position = Vector2( 2693, 95 )
+scale = Vector2( 20, 10 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret3"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret3"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret3/Area2D3"]
+position = Vector2( -5.44999, 1.2 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
 
 [node name="Paret4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 15348, -193 )
-scale = Vector2( 1, 5 )
+position = Vector2( 3673, -92 )
+scale = Vector2( 10, 12 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret4"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret4"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret4/Area2D3"]
+position = Vector2( -5.9, -0.916666 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Paret5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4500, 250 )
+scale = Vector2( 20, 3 )
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Paret5"]
+position = Vector2( -0.100098, -16.6667 )
+scale = Vector2( 0.041104, 0.13247 )
+texture = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret5"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -11.0
+margin_right = 24.0
+margin_bottom = 20.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret5"]
+position = Vector2( -1.5, 13 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret5"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret5/Area2D3"]
+position = Vector2( -2.39999, 5.33334 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Paret5/Area2D3"]
+position = Vector2( 1.20001, 4.66666 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 4 )
+
+[node name="Paret13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 9500, 250 )
+scale = Vector2( 20, 3 )
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Paret13"]
+position = Vector2( -0.100098, -16.6667 )
+scale = Vector2( 0.041104, 0.13247 )
+texture = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret13"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -11.0
+margin_right = 24.0
+margin_bottom = 20.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret13"]
+position = Vector2( -1.5, 13 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret13"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret13/Area2D3"]
+position = Vector2( -2.39999, 5.66666 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Paret13/Area2D3"]
+position = Vector2( 1.20001, 4.66666 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 4 )
+
+[node name="Paret14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 10000, 250 )
+scale = Vector2( 20, 3 )
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Paret14"]
+position = Vector2( -0.100098, -16.6667 )
+scale = Vector2( 0.041104, 0.13247 )
+texture = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret14"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -11.0
+margin_right = 24.0
+margin_bottom = 20.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret14"]
+position = Vector2( -1.5, 13 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret14"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret14/Area2D3"]
+position = Vector2( 2.75, 4 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Paret14/Area2D3"]
+position = Vector2( 1.20001, 4.66666 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 4 )
+
+[node name="Paret15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 10500, 250 )
+scale = Vector2( 20, 3 )
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Paret15"]
+position = Vector2( -0.100098, -16.6667 )
+scale = Vector2( 0.041104, 0.13247 )
+texture = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret15"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -11.0
+margin_right = 24.0
+margin_bottom = 20.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret15"]
+position = Vector2( -1.5, 13 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret15"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret15/Area2D3"]
+position = Vector2( 3.55002, 4 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Paret15/Area2D3"]
+position = Vector2( 1.20001, 4.66666 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 4 )
+
+[node name="Paret6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5497, 117 )
+scale = Vector2( 20, 12 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret6"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret6"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret6"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret6/Area2D3"]
+position = Vector2( -5.34999, 0.916667 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Paret7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6301, -100 )
+scale = Vector2( 1, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret7"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret7"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret7"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret7/Area2D3"]
+position = Vector2( -8.0001, -0.799999 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Paret9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7429, -97 )
+scale = Vector2( 1, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret9"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret9"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret9"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret9/Area2D3"]
+position = Vector2( -7.0001, -0.7 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Paret11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8500, -97 )
+scale = Vector2( 1, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret11"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret11"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret11"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret11/Area2D3"]
+position = Vector2( -6.99961, -0.7 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Paret8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6862, 98 )
+scale = Vector2( 1, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret8"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret8"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret8"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret8/Area2D3"]
+position = Vector2( -8.0001, 0.800001 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Paret10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8000, 98 )
+scale = Vector2( 1, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret10"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret10"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret10"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret10/Area2D3"]
+position = Vector2( -6.0001, 0.8 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Paret12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 9000, 98 )
+scale = Vector2( 1, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret12"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret12"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Paret12"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Area2D3"]
+position = Vector2( -6.99961, 0.8 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Rotador" type="StaticBody2D" parent="Paret12"]
+position = Vector2( 2283, -6.3 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador"]
+margin_left = -20.0
+margin_top = -16.0
+margin_right = 20.0
+margin_bottom = 16.0
+color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador"]
+position = Vector2( 0, -4.76837e-07 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 6 )
+
+[node name="Area2D3" type="Area2D" parent="Paret12/Rotador"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador/Area2D3"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 7 )
+
+[node name="Rotador2" type="StaticBody2D" parent="Paret12"]
+position = Vector2( 2664, -21.2 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador2"]
+margin_left = -20.0
+margin_top = -16.0
+margin_right = 20.0
+margin_bottom = 16.0
+color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador2"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 6 )
+
+[node name="Area2D3" type="Area2D" parent="Paret12/Rotador2"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador2/Area2D3"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 7 )
+
+[node name="Rotador6" type="StaticBody2D" parent="Paret12"]
+position = Vector2( 3036, 11.6 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador6"]
+margin_left = -20.0
+margin_top = -16.0
+margin_right = 20.0
+margin_bottom = 16.0
+color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador6"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 6 )
+
+[node name="Area2D3" type="Area2D" parent="Paret12/Rotador6"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador6/Area2D3"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 7 )
+
+[node name="Rotador3" type="StaticBody2D" parent="Paret12"]
+position = Vector2( 3762, -1.9 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador3"]
+margin_left = -20.0
+margin_top = -16.0
+margin_right = 20.0
+margin_bottom = 16.0
+color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador3"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 6 )
+
+[node name="Area2D3" type="Area2D" parent="Paret12/Rotador3"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador3/Area2D3"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 7 )
+
+[node name="Rotador7" type="StaticBody2D" parent="Paret12"]
+position = Vector2( 3329, -31 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador7"]
+margin_left = -20.0
+margin_top = -16.0
+margin_right = 20.0
+margin_bottom = 16.0
+color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador7"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 6 )
+
+[node name="Area2D3" type="Area2D" parent="Paret12/Rotador7"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador7/Area2D3"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 7 )
+
+[node name="Rotador4" type="StaticBody2D" parent="Paret12"]
+position = Vector2( 4279, -31.1 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador4"]
+margin_left = -20.0
+margin_top = -16.0
+margin_right = 20.0
+margin_bottom = 16.0
+color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador4"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 6 )
+
+[node name="Area2D3" type="Area2D" parent="Paret12/Rotador4"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador4/Area2D3"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 7 )
+
+[node name="Rotador9" type="StaticBody2D" parent="Paret12"]
+position = Vector2( 5071, -9.8 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador9"]
+margin_left = -20.0
+margin_top = -16.0
+margin_right = 20.0
+margin_bottom = 16.0
+color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador9"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 6 )
+
+[node name="Area2D3" type="Area2D" parent="Paret12/Rotador9"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador9/Area2D3"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 7 )
+
+[node name="Rotador8" type="StaticBody2D" parent="Paret12"]
+position = Vector2( 4401, 11.6 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador8"]
+margin_left = -20.0
+margin_top = -16.0
+margin_right = 20.0
+margin_bottom = 16.0
+color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador8"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 6 )
+
+[node name="Area2D3" type="Area2D" parent="Paret12/Rotador8"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador8/Area2D3"]
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 7 )
+
+[node name="Rotador5" type="StaticBody2D" parent="Paret12"]
+position = Vector2( 5589, -30.9 )
+scale = Vector2( 0.5, 0.5 )
+z_as_relative = false
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador5"]
+margin_left = -20.0
+margin_top = -16.0
+margin_right = 20.0
+margin_bottom = 16.0
+color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador5"]
+scale = Vector2( 0.5, 0.5 )
+z_as_relative = false
+shape = SubResource( 6 )
+
+[node name="Area2D3" type="Area2D" parent="Paret12/Rotador5"]
+scale = Vector2( 0.5, 0.5 )
+z_as_relative = false
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador5/Area2D3"]
+scale = Vector2( 0.5, 0.5 )
+z_as_relative = false
+shape = SubResource( 7 )
+
+[node name="Rotador10" type="StaticBody2D" parent="Paret12"]
+position = Vector2( 5993, 11.4 )
+scale = Vector2( 0.5, 0.5 )
+z_as_relative = false
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador10"]
+margin_left = -20.0
+margin_top = -16.0
+margin_right = 20.0
+margin_bottom = 16.0
+color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador10"]
+scale = Vector2( 0.5, 0.5 )
+z_as_relative = false
+shape = SubResource( 6 )
+
+[node name="Area2D3" type="Area2D" parent="Paret12/Rotador10"]
+scale = Vector2( 0.5, 0.5 )
+z_as_relative = false
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador10/Area2D3"]
+scale = Vector2( 0.5, 0.5 )
+z_as_relative = false
+shape = SubResource( 7 )
+
+[connection signal="area_entered" from="Paret/Area2D3" to="Paret/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret/Area2D3" to="Paret" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret/Area2D3" to="Paret/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret/Area2D3" to="Paret/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret2/Area2D3" to="Paret2/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret2/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret2/Area2D3" to="Paret2" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret2/Area2D3" to="Paret2/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret2/Area2D3" to="Paret2/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret3/Area2D3" to="Paret3/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret3/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret3/Area2D3" to="Paret3" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret3/Area2D3" to="Paret3/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret3/Area2D3" to="Paret3/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret4/Area2D3" to="Paret4/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret4/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret4/Area2D3" to="Paret4" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret4/Area2D3" to="Paret4/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret4/Area2D3" to="Paret4/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret5/Area2D3" to="Paret5/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret5/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret5/Area2D3" to="Paret5" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret5/Area2D3" to="Paret5/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret5/Area2D3" to="Paret5/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret13/Area2D3" to="Paret13/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret13/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret13/Area2D3" to="Paret13" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret13/Area2D3" to="Paret13/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret13/Area2D3" to="Paret13/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret14/Area2D3" to="Paret14/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret14/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret14/Area2D3" to="Paret14" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret14/Area2D3" to="Paret14/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret14/Area2D3" to="Paret14/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret15/Area2D3" to="Paret15/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret15/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret15/Area2D3" to="Paret15" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret15/Area2D3" to="Paret15/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret15/Area2D3" to="Paret15/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret6/Area2D3" to="Paret6/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret6/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret6/Area2D3" to="Paret6" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret6/Area2D3" to="Paret6/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret6/Area2D3" to="Paret6/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret7/Area2D3" to="Paret7/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret7/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret7/Area2D3" to="Paret7" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret7/Area2D3" to="Paret7/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret7/Area2D3" to="Paret7/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret9/Area2D3" to="Paret9/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret9/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret9/Area2D3" to="Paret9" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret9/Area2D3" to="Paret9/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret9/Area2D3" to="Paret9/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret11/Area2D3" to="Paret11/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret11/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret11/Area2D3" to="Paret11" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret11/Area2D3" to="Paret11/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret11/Area2D3" to="Paret11/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret8/Area2D3" to="Paret8/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret8/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret8/Area2D3" to="Paret8" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret8/Area2D3" to="Paret8/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret8/Area2D3" to="Paret8/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret10/Area2D3" to="Paret10/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret10/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret10/Area2D3" to="Paret10" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret10/Area2D3" to="Paret10/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret10/Area2D3" to="Paret10/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret12/Area2D3" to="Paret12/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret12/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Area2D3" to="Paret12/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret12/Area2D3" to="Paret12/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret12/Rotador/Area2D3" to="Paret12/Rotador/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret12/Rotador/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador/Area2D3" to="Paret12/Rotador" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador/Area2D3" to="Paret12/Rotador/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret12/Rotador/Area2D3" to="Paret12/Rotador/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret12/Rotador2/Area2D3" to="Paret12/Rotador2/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret12/Rotador2/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador2/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador2/Area2D3" to="Paret12/Rotador2" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador2/Area2D3" to="Paret12/Rotador2/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret12/Rotador2/Area2D3" to="Paret12/Rotador2/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret12/Rotador6/Area2D3" to="Paret12/Rotador6/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret12/Rotador6/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador6/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador6/Area2D3" to="Paret12/Rotador6" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador6/Area2D3" to="Paret12/Rotador6/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret12/Rotador6/Area2D3" to="Paret12/Rotador6/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret12/Rotador3/Area2D3" to="Paret12/Rotador3/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret12/Rotador3/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador3/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador3/Area2D3" to="Paret12/Rotador3" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador3/Area2D3" to="Paret12/Rotador3/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret12/Rotador3/Area2D3" to="Paret12/Rotador3/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret12/Rotador7/Area2D3" to="Paret12/Rotador7/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret12/Rotador7/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador7/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador7/Area2D3" to="Paret12/Rotador7" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador7/Area2D3" to="Paret12/Rotador7/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret12/Rotador7/Area2D3" to="Paret12/Rotador7/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret12/Rotador4/Area2D3" to="Paret12/Rotador4/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret12/Rotador4/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador4/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador4/Area2D3" to="Paret12/Rotador4" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador4/Area2D3" to="Paret12/Rotador4/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret12/Rotador4/Area2D3" to="Paret12/Rotador4/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret12/Rotador9/Area2D3" to="Paret12/Rotador9/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret12/Rotador9/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador9/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador9/Area2D3" to="Paret12/Rotador9" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador9/Area2D3" to="Paret12/Rotador9/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret12/Rotador9/Area2D3" to="Paret12/Rotador9/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret12/Rotador8/Area2D3" to="Paret12/Rotador8/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret12/Rotador8/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador8/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador8/Area2D3" to="Paret12/Rotador8" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador8/Area2D3" to="Paret12/Rotador8/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret12/Rotador8/Area2D3" to="Paret12/Rotador8/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret12/Rotador5/Area2D3" to="Paret12/Rotador5/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret12/Rotador5/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador5/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador5/Area2D3" to="Paret12/Rotador5" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador5/Area2D3" to="Paret12/Rotador5/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret12/Rotador5/Area2D3" to="Paret12/Rotador5/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Paret12/Rotador10/Area2D3" to="Paret12/Rotador10/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Paret12/Rotador10/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador10/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador10/Area2D3" to="Paret12/Rotador10" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Paret12/Rotador10/Area2D3" to="Paret12/Rotador10/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Paret12/Rotador10/Area2D3" to="Paret12/Rotador10/Area2D3" method="_on_Area2D2_body_exited"]

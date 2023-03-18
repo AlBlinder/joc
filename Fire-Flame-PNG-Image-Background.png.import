@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/png-transparent-smoke-effects-effect-element-smoke-fire.png-a92087b776ed50e4cbd29d46797f94dd.stex"
+path="res://.import/Fire-Flame-PNG-Image-Background.png-99ee68be80eec61ae148d8f3d54c9387.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://png-transparent-smoke-effects-effect-element-smoke-fire.png"
-dest_files=[ "res://.import/png-transparent-smoke-effects-effect-element-smoke-fire.png-a92087b776ed50e4cbd29d46797f94dd.stex" ]
+source_file="res://Fire-Flame-PNG-Image-Background.png"
+dest_files=[ "res://.import/Fire-Flame-PNG-Image-Background.png-99ee68be80eec61ae148d8f3d54c9387.stex" ]
 
 [params]
 

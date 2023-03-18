@@ -24,11 +24,10 @@ limit_bottom = 300
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 
-[node name="Label" type="Label" parent="."]
-anchor_right = 0.092
-margin_left = -21.0
-margin_top = -48.0
-margin_right = 21.0
-margin_bottom = -33.0
+[node name="Combustible" type="Label" parent="."]
+margin_left = -20.0
+margin_top = -49.0
+margin_right = 20.0
+margin_bottom = -35.0
 align = 1
 valign = 1
