@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Personatge_principal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Paret.tscn" type="PackedScene" id=2]
@@ -13,16 +13,16 @@
 [sub_resource type="Theme" id=1]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 20, 20 )
+extents = Vector2( 19.8259, 19.9552 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 20.0249, 20.6 )
+extents = Vector2( 19.5505, 20.4987 )
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 23.025, 10 )
 
 [sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 24.125, 12.5 )
+extents = Vector2( 23.45, 12 )
 
 [sub_resource type="PhysicsMaterial" id=5]
 
@@ -30,7 +30,10 @@ extents = Vector2( 24.125, 12.5 )
 extents = Vector2( 20, 13 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 21, 13.1 )
+extents = Vector2( 21.5718, 13.1154 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 19.3748, 54.9 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 4 )
@@ -47,6 +50,7 @@ valign = 1
 uppercase = true
 
 [node name="Personatge" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32300, -16 )
 
 [node name="ColorRect" type="ColorRect" parent="Personatge"]
 anchor_left = 1.0
@@ -216,7 +220,7 @@ scale = Vector2( 1, 1 )
 script = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foc/Area2D"]
-position = Vector2( 1.22501, -11.5 )
+position = Vector2( 1.89999, -11 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 11 )
 
@@ -336,7 +340,7 @@ margin_right = 15.0
 margin_bottom = 19.6
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret6"]
-position = Vector2( -5, -3.8147e-06 )
+position = Vector2( -5.15, 0 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
@@ -344,7 +348,7 @@ shape = SubResource( 3 )
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paret6/Area2D3"]
-position = Vector2( -5.34999, 0.916667 )
+position = Vector2( -5.54998, 0.916667 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
@@ -429,7 +433,7 @@ margin_right = 15.0
 margin_bottom = 19.6
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret11"]
-position = Vector2( -5, -3.8147e-06 )
+position = Vector2( -5, 0.0447693 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
@@ -522,7 +526,7 @@ margin_right = 15.0
 margin_bottom = 19.6
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret12"]
-position = Vector2( -5, -3.8147e-06 )
+position = Vector2( -5, -0.0895424 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
@@ -530,7 +534,7 @@ shape = SubResource( 3 )
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Area2D3"]
-position = Vector2( -6.99961, 0.8 )
+position = Vector2( -7, 0.698743 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
@@ -634,8 +638,8 @@ shape = SubResource( 8 )
 shape = SubResource( 9 )
 
 [node name="Girador5" type="StaticBody2D" parent="."]
-position = Vector2( 13213, 160 )
-rotation = 1.5708
+position = Vector2( 13315, 158 )
+rotation = 1.05243
 scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
 
@@ -659,7 +663,7 @@ shape = SubResource( 8 )
 shape = SubResource( 9 )
 
 [node name="Girador6" type="StaticBody2D" parent="."]
-position = Vector2( 13698, 1 )
+position = Vector2( 13828, 1 )
 scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
 
@@ -804,10 +808,12 @@ shape = SubResource( 8 )
 [node name="Area2D" type="Area2D" parent="Girador12"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Girador12/Area2D"]
+position = Vector2( 0, 0.0153809 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 9 )
 
 [node name="Girador13" type="StaticBody2D" parent="."]
-position = Vector2( 16072, 143 )
+position = Vector2( 16194, 172.001 )
 rotation = -0.921534
 scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
@@ -829,6 +835,7 @@ shape = SubResource( 8 )
 [node name="Area2D" type="Area2D" parent="Girador13"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Girador13/Area2D"]
+position = Vector2( 0.904297, 0.000244141 )
 shape = SubResource( 9 )
 
 [node name="Girador14" type="StaticBody2D" parent="."]
@@ -854,6 +861,8 @@ shape = SubResource( 8 )
 [node name="Area2D" type="Area2D" parent="Girador14"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Girador14/Area2D"]
+position = Vector2( -0.326172, 0.00012207 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 9 )
 
 [node name="Girador15" type="StaticBody2D" parent="."]
@@ -957,7 +966,7 @@ shape = SubResource( 8 )
 shape = SubResource( 9 )
 
 [node name="Girador19" type="StaticBody2D" parent="."]
-position = Vector2( 18717, 162 )
+position = Vector2( 18620, 173.999 )
 rotation = -0.748746
 scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
@@ -982,7 +991,7 @@ shape = SubResource( 8 )
 shape = SubResource( 9 )
 
 [node name="Girador20" type="StaticBody2D" parent="."]
-position = Vector2( 18498, -130 )
+position = Vector2( 18508, -212 )
 rotation = 1.21126
 scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
@@ -1131,6 +1140,1819 @@ shape = SubResource( 8 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Girador25/Area2D"]
 shape = SubResource( 9 )
 
+[node name="Pinxo" parent="." instance=ExtResource( 2 )]
+position = Vector2( 21958, 332 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo"]
+position = Vector2( -5, -0.215088 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo/Area2D3"]
+position = Vector2( -5.58679, 0.0665283 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 21958, 332 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo19"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo19"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo19"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo19/Area2D3"]
+position = Vector2( -5.08374, -0.310059 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo20" parent="." instance=ExtResource( 2 )]
+position = Vector2( 25037, 331.999 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo20"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo20"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo20"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo20/Area2D3"]
+position = Vector2( -5.57324, 0.0866699 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo37" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30162, 410 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo37"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo37"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo37"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo37/Area2D3"]
+position = Vector2( -5.57324, 0.0866699 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo42" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30275, 384.002 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo42"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo42"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo42"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo42/Area2D3"]
+position = Vector2( -5.57324, 0.0866699 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo43" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30474, 463.002 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo43"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo43"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo43"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo43/Area2D3"]
+position = Vector2( -5.57324, 0.0866699 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo45" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30614, 459.002 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo45"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo45"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo45"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo45/Area2D3"]
+position = Vector2( -5.57324, 0.0866699 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo47" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30814, 444.001 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo47"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo47"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo47"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo47/Area2D3"]
+position = Vector2( -5.57324, 0.0866699 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo49" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30972, 438.001 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo49"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo49"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo49"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo49/Area2D3"]
+position = Vector2( -5.57324, 0.0866699 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo50" parent="." instance=ExtResource( 2 )]
+position = Vector2( 31182, 457.002 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo50"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo50"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo50"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo50/Area2D3"]
+position = Vector2( -5.57324, 0.0866699 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo53" parent="." instance=ExtResource( 2 )]
+position = Vector2( 31400, 437.002 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo53"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo53"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo53"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo53/Area2D3"]
+position = Vector2( -5.57324, 0.0866699 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo22" parent="." instance=ExtResource( 2 )]
+position = Vector2( 26243, 332 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo22"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo22"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo22"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo22/Area2D3"]
+position = Vector2( -5.68127, 0.0683594 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo23" parent="." instance=ExtResource( 2 )]
+position = Vector2( 26773, 332.001 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo23"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo23"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo23"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo23/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo24" parent="." instance=ExtResource( 2 )]
+position = Vector2( 27297, 320 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo24"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo24"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo24"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo24/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo25" parent="." instance=ExtResource( 2 )]
+position = Vector2( 27831, 312 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo25"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo25"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo25"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo25/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo26" parent="." instance=ExtResource( 2 )]
+position = Vector2( 28358, 311.999 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo26"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo26"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo26"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo26/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo27" parent="." instance=ExtResource( 2 )]
+position = Vector2( 28116, 320.001 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo27"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo27"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo27"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo27/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo28" parent="." instance=ExtResource( 2 )]
+position = Vector2( 27555, 320 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo28"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo28"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo28"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo28/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo29" parent="." instance=ExtResource( 2 )]
+position = Vector2( 26493, 320 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo29"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo29"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo29"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo29/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo30" parent="." instance=ExtResource( 2 )]
+position = Vector2( 27031, 312.001 )
+rotation = 2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo30"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo30"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo30"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo30/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23058, 332 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo3"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo3"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo3/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23326, 319.999 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo4"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo4"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo4/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23590, 331.999 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo5"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo5"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo5/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23848, 332 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo6"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo6"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo6"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo6/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23738, 331.999 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo8"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo8"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo8"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo8/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23453, 320 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo9"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo9"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo9"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo9/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23185, 320.001 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo10"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo10"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo10"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo10/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23058, 332 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo11"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo11"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo11"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo11/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23326, 319.999 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo12"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo12"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo12"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo12/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23590, 331.999 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo13"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo13"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo13"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo13/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23848, 332 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo14"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo14"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo14"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo14/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23738, 331.999 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo15"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo15"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo15"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo15/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23453, 320 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo16"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo16"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo16"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo16/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23185, 320.001 )
+rotation = 2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo17"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo17"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo17"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo17/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 22489, -337 )
+rotation = -2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo2"]
+position = Vector2( -4.88647, -0.0360107 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo2"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo2/Area2D3"]
+position = Vector2( -5.30139, 0.0467529 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 23437, -337 )
+rotation = -2.32303
+scale = Vector2( 7, 7 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo7"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo7"]
+position = Vector2( -4.93921, -0.000244141 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo7"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo7/Area2D3"]
+position = Vector2( -5.45874, -0.0212402 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 24438, -360 )
+rotation = -2.32303
+scale = Vector2( 15, 15 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo18"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo18"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo18"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo18/Area2D3"]
+position = Vector2( -5.52222, 0.1521 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo21" parent="." instance=ExtResource( 2 )]
+position = Vector2( 25622, -356.001 )
+rotation = -2.32303
+scale = Vector2( 15, 15 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo21"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo21"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo21"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo21/Area2D3"]
+position = Vector2( -5.6814, 0.127075 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo31" parent="." instance=ExtResource( 2 )]
+position = Vector2( 27157, -423 )
+rotation = -2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo31"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo31"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo31"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo31/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo32" parent="." instance=ExtResource( 2 )]
+position = Vector2( 27157, -423 )
+rotation = -2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo32"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo32"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo32"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo32/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo35" parent="." instance=ExtResource( 2 )]
+position = Vector2( 28241, -414 )
+rotation = -2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo35"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo35"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo35"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo35/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo36" parent="." instance=ExtResource( 2 )]
+position = Vector2( 28241, -414 )
+rotation = -2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo36"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo36"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo36"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo36/Area2D3"]
+position = Vector2( -5.68164, -0.0688477 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo38" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30154, -404 )
+rotation = -2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo38"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo38"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo38"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo38/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo39" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30154, -404 )
+rotation = -2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo39"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo39"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo39"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo39/Area2D3"]
+position = Vector2( -5.68164, -0.0688477 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo40" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30302, -354 )
+rotation = -2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo40"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo40"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo40"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo40/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo41" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30517, -459 )
+rotation = -2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo41"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo41"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo41"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo41/Area2D3"]
+position = Vector2( -5.68164, -0.0688477 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo44" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30659, -456 )
+rotation = -2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo44"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo44"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo44"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo44/Area2D3"]
+position = Vector2( -5.68164, -0.0688477 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo46" parent="." instance=ExtResource( 2 )]
+position = Vector2( 31042, -452.001 )
+rotation = -2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo46"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo46"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo46"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo46/Area2D3"]
+position = Vector2( -5.68164, -0.0688477 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo51" parent="." instance=ExtResource( 2 )]
+position = Vector2( 31227, -458 )
+rotation = -2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo51"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo51"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo51"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo51/Area2D3"]
+position = Vector2( -5.68164, -0.0688477 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo52" parent="." instance=ExtResource( 2 )]
+position = Vector2( 31445, -478 )
+rotation = -2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo52"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo52"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo52"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo52/Area2D3"]
+position = Vector2( -5.68164, -0.0688477 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo48" parent="." instance=ExtResource( 2 )]
+position = Vector2( 30844, -446.999 )
+rotation = -2.32303
+scale = Vector2( 10, 10 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo48"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo48"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo48"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo48/Area2D3"]
+position = Vector2( -5.68164, -0.0688477 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo33" parent="." instance=ExtResource( 2 )]
+position = Vector2( 27700, -375 )
+rotation = -2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo33"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo33"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo33"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo33/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Pinxo34" parent="." instance=ExtResource( 2 )]
+position = Vector2( 27700, -375 )
+rotation = -2.32303
+scale = Vector2( 5, 5 )
+constant_linear_velocity = Vector2( 4, 4 )
+constant_angular_velocity = 10.0
+physics_material_override = SubResource( 5 )
+script = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Pinxo34"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -20.4
+margin_right = 15.0
+margin_bottom = 19.6
+color = Color( 0, 0, 0, 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo34"]
+position = Vector2( -5, -3.8147e-06 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 3 )
+
+[node name="Area2D3" type="Area2D" parent="Pinxo34"]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo34/Area2D3"]
+position = Vector2( -5.6814, 0.207275 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 32782, 1 )
+scale = Vector2( 5, 5 )
+
+[node name="ColorRect" type="ColorRect" parent="Area2D"]
+margin_left = -19.001
+margin_top = -54.0
+margin_right = 18.999
+margin_bottom = 54.0
+color = Color( 0.0313726, 0.945098, 0, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -0.000976562, 1.49012e-08 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 12 )
+
+[node name="meta" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.711
+anchor_bottom = 0.5
+margin_left = 32699.0
+margin_top = 200.0
+margin_right = 32734.0
+margin_bottom = 214.0
+rect_scale = Vector2( 5, 5 )
+rect_pivot_offset = Vector2( 1, 0 )
+text = "META"
+align = 1
+valign = 1
+
+[node name="meta3" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.711
+anchor_bottom = 0.5
+margin_left = 32699.0
+margin_top = -265.0
+margin_right = 32734.0
+margin_bottom = -251.0
+rect_scale = Vector2( 5, 5 )
+rect_pivot_offset = Vector2( 1, 0 )
+text = "META"
+align = 1
+valign = 1
+
+[node name="meta2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.711
+anchor_bottom = 0.5
+margin_left = 33049.0
+margin_top = -156.0
+margin_right = 33233.0
+margin_bottom = -91.0
+rect_scale = Vector2( 5, 5 )
+rect_pivot_offset = Vector2( 1, 0 )
+text = "HAS GUANYAT!
+FELICITATS!
+MOLTES GRÀCIES PER JUGAR!
+Fet per: Alex Blinder"
+align = 1
+valign = 1
+
 [connection signal="area_entered" from="Paret/Area2D3" to="Paret/Area2D3" method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="Paret/Area2D3" to="." method="_on_Area2D3_body_entered"]
 [connection signal="body_entered" from="Paret/Area2D3" to="Paret" method="_on_Area2D3_body_entered"]
@@ -1244,3 +3066,268 @@ shape = SubResource( 9 )
 [connection signal="body_entered" from="Girador24/Area2D" to="Girador24" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Girador25/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Girador25/Area2D" to="Girador25" method="_on_Area2D_body_entered"]
+[connection signal="area_entered" from="Pinxo/Area2D3" to="Pinxo/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo/Area2D3" to="Pinxo" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo/Area2D3" to="Pinxo/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo/Area2D3" to="Pinxo/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo19/Area2D3" to="Pinxo19/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo19/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo19/Area2D3" to="Pinxo19" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo19/Area2D3" to="Pinxo19/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo19/Area2D3" to="Pinxo19/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo20/Area2D3" to="Pinxo20/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo20/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo20/Area2D3" to="Pinxo20" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo20/Area2D3" to="Pinxo20/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo20/Area2D3" to="Pinxo20/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo37/Area2D3" to="Pinxo37/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo37/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo37/Area2D3" to="Pinxo37" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo37/Area2D3" to="Pinxo37/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo37/Area2D3" to="Pinxo37/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo42/Area2D3" to="Pinxo42/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo42/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo42/Area2D3" to="Pinxo42" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo42/Area2D3" to="Pinxo42/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo42/Area2D3" to="Pinxo42/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo43/Area2D3" to="Pinxo43/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo43/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo43/Area2D3" to="Pinxo43" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo43/Area2D3" to="Pinxo43/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo43/Area2D3" to="Pinxo43/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo45/Area2D3" to="Pinxo45/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo45/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo45/Area2D3" to="Pinxo45" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo45/Area2D3" to="Pinxo45/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo45/Area2D3" to="Pinxo45/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo47/Area2D3" to="Pinxo47/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo47/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo47/Area2D3" to="Pinxo47" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo47/Area2D3" to="Pinxo47/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo47/Area2D3" to="Pinxo47/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo49/Area2D3" to="Pinxo49/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo49/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo49/Area2D3" to="Pinxo49" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo49/Area2D3" to="Pinxo49/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo49/Area2D3" to="Pinxo49/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo50/Area2D3" to="Pinxo50/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo50/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo50/Area2D3" to="Pinxo50" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo50/Area2D3" to="Pinxo50/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo50/Area2D3" to="Pinxo50/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo53/Area2D3" to="Pinxo53/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo53/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo53/Area2D3" to="Pinxo53" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo53/Area2D3" to="Pinxo53/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo53/Area2D3" to="Pinxo53/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo22/Area2D3" to="Pinxo22/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo22/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo22/Area2D3" to="Pinxo22" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo22/Area2D3" to="Pinxo22/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo22/Area2D3" to="Pinxo22/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo23/Area2D3" to="Pinxo23/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo23/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo23/Area2D3" to="Pinxo23" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo23/Area2D3" to="Pinxo23/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo23/Area2D3" to="Pinxo23/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo24/Area2D3" to="Pinxo24/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo24/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo24/Area2D3" to="Pinxo24" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo24/Area2D3" to="Pinxo24/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo24/Area2D3" to="Pinxo24/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo25/Area2D3" to="Pinxo25/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo25/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo25/Area2D3" to="Pinxo25" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo25/Area2D3" to="Pinxo25/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo25/Area2D3" to="Pinxo25/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo26/Area2D3" to="Pinxo26/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo26/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo26/Area2D3" to="Pinxo26" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo26/Area2D3" to="Pinxo26/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo26/Area2D3" to="Pinxo26/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo27/Area2D3" to="Pinxo27/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo27/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo27/Area2D3" to="Pinxo27" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo27/Area2D3" to="Pinxo27/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo27/Area2D3" to="Pinxo27/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo28/Area2D3" to="Pinxo28/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo28/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo28/Area2D3" to="Pinxo28" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo28/Area2D3" to="Pinxo28/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo28/Area2D3" to="Pinxo28/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo29/Area2D3" to="Pinxo29/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo29/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo29/Area2D3" to="Pinxo29" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo29/Area2D3" to="Pinxo29/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo29/Area2D3" to="Pinxo29/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo30/Area2D3" to="Pinxo30/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo30/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo30/Area2D3" to="Pinxo30" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo30/Area2D3" to="Pinxo30/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo30/Area2D3" to="Pinxo30/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo3/Area2D3" to="Pinxo3/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo3/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo3/Area2D3" to="Pinxo3" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo3/Area2D3" to="Pinxo3/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo3/Area2D3" to="Pinxo3/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo4/Area2D3" to="Pinxo4/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo4/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo4/Area2D3" to="Pinxo4" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo4/Area2D3" to="Pinxo4/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo4/Area2D3" to="Pinxo4/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo5/Area2D3" to="Pinxo5/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo5/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo5/Area2D3" to="Pinxo5" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo5/Area2D3" to="Pinxo5/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo5/Area2D3" to="Pinxo5/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo6/Area2D3" to="Pinxo6/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo6/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo6/Area2D3" to="Pinxo6" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo6/Area2D3" to="Pinxo6/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo6/Area2D3" to="Pinxo6/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo8/Area2D3" to="Pinxo8/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo8/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo8/Area2D3" to="Pinxo8" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo8/Area2D3" to="Pinxo8/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo8/Area2D3" to="Pinxo8/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo9/Area2D3" to="Pinxo9/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo9/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo9/Area2D3" to="Pinxo9" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo9/Area2D3" to="Pinxo9/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo9/Area2D3" to="Pinxo9/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo10/Area2D3" to="Pinxo10/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo10/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo10/Area2D3" to="Pinxo10" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo10/Area2D3" to="Pinxo10/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo10/Area2D3" to="Pinxo10/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo11/Area2D3" to="Pinxo11/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo11/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo11/Area2D3" to="Pinxo11" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo11/Area2D3" to="Pinxo11/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo11/Area2D3" to="Pinxo11/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo12/Area2D3" to="Pinxo12/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo12/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo12/Area2D3" to="Pinxo12" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo12/Area2D3" to="Pinxo12/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo12/Area2D3" to="Pinxo12/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo13/Area2D3" to="Pinxo13/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo13/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo13/Area2D3" to="Pinxo13" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo13/Area2D3" to="Pinxo13/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo13/Area2D3" to="Pinxo13/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo14/Area2D3" to="Pinxo14/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo14/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo14/Area2D3" to="Pinxo14" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo14/Area2D3" to="Pinxo14/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo14/Area2D3" to="Pinxo14/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo15/Area2D3" to="Pinxo15/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo15/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo15/Area2D3" to="Pinxo15" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo15/Area2D3" to="Pinxo15/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo15/Area2D3" to="Pinxo15/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo16/Area2D3" to="Pinxo16/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo16/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo16/Area2D3" to="Pinxo16" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo16/Area2D3" to="Pinxo16/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo16/Area2D3" to="Pinxo16/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo17/Area2D3" to="Pinxo17/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo17/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo17/Area2D3" to="Pinxo17" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo17/Area2D3" to="Pinxo17/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo17/Area2D3" to="Pinxo17/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo2/Area2D3" to="Pinxo2/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo2/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo2/Area2D3" to="Pinxo2" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo2/Area2D3" to="Pinxo2/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo2/Area2D3" to="Pinxo2/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo7/Area2D3" to="Pinxo7/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo7/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo7/Area2D3" to="Pinxo7" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo7/Area2D3" to="Pinxo7/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo7/Area2D3" to="Pinxo7/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo18/Area2D3" to="Pinxo18/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo18/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo18/Area2D3" to="Pinxo18" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo18/Area2D3" to="Pinxo18/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo18/Area2D3" to="Pinxo18/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo21/Area2D3" to="Pinxo21/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo21/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo21/Area2D3" to="Pinxo21" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo21/Area2D3" to="Pinxo21/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo21/Area2D3" to="Pinxo21/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo31/Area2D3" to="Pinxo31/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo31/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo31/Area2D3" to="Pinxo31" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo31/Area2D3" to="Pinxo31/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo31/Area2D3" to="Pinxo31/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo32/Area2D3" to="Pinxo32/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo32/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo32/Area2D3" to="Pinxo32" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo32/Area2D3" to="Pinxo32/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo32/Area2D3" to="Pinxo32/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo35/Area2D3" to="Pinxo35/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo35/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo35/Area2D3" to="Pinxo35" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo35/Area2D3" to="Pinxo35/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo35/Area2D3" to="Pinxo35/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo36/Area2D3" to="Pinxo36/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo36/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo36/Area2D3" to="Pinxo36" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo36/Area2D3" to="Pinxo36/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo36/Area2D3" to="Pinxo36/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo38/Area2D3" to="Pinxo38/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo38/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo38/Area2D3" to="Pinxo38" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo38/Area2D3" to="Pinxo38/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo38/Area2D3" to="Pinxo38/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo39/Area2D3" to="Pinxo39/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo39/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo39/Area2D3" to="Pinxo39" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo39/Area2D3" to="Pinxo39/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo39/Area2D3" to="Pinxo39/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo40/Area2D3" to="Pinxo40/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo40/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo40/Area2D3" to="Pinxo40" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo40/Area2D3" to="Pinxo40/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo40/Area2D3" to="Pinxo40/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo41/Area2D3" to="Pinxo41/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo41/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo41/Area2D3" to="Pinxo41" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo41/Area2D3" to="Pinxo41/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo41/Area2D3" to="Pinxo41/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo44/Area2D3" to="Pinxo44/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo44/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo44/Area2D3" to="Pinxo44" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo44/Area2D3" to="Pinxo44/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo44/Area2D3" to="Pinxo44/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo46/Area2D3" to="Pinxo46/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo46/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo46/Area2D3" to="Pinxo46" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo46/Area2D3" to="Pinxo46/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo46/Area2D3" to="Pinxo46/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo51/Area2D3" to="Pinxo51/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo51/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo51/Area2D3" to="Pinxo51" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo51/Area2D3" to="Pinxo51/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo51/Area2D3" to="Pinxo51/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo52/Area2D3" to="Pinxo52/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo52/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo52/Area2D3" to="Pinxo52" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo52/Area2D3" to="Pinxo52/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo52/Area2D3" to="Pinxo52/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo48/Area2D3" to="Pinxo48/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo48/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo48/Area2D3" to="Pinxo48" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo48/Area2D3" to="Pinxo48/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo48/Area2D3" to="Pinxo48/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo33/Area2D3" to="Pinxo33/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo33/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo33/Area2D3" to="Pinxo33" method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo33/Area2D3" to="Pinxo33/Area2D3" method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Pinxo33/Area2D3" to="Pinxo33/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="area_entered" from="Pinxo34/Area2D3" to="Pinxo34/Area2D3" method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Pinxo34/Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Pinxo34/Area2D3" to="Pinxo34" method="_on_Area2D3_body_entered"]
+[connection signal="body_exited" from="Pinxo34/Area2D3" to="Pinxo34/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered_meta"]
