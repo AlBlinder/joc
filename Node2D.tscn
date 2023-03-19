@@ -50,7 +50,6 @@ valign = 1
 uppercase = true
 
 [node name="Personatge" parent="." instance=ExtResource( 1 )]
-position = Vector2( 32300, -16 )
 
 [node name="ColorRect" type="ColorRect" parent="Personatge"]
 anchor_left = 1.0
