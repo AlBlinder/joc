@@ -11,11 +11,9 @@ func _ready():
 	pass # Replace with function body.f
 func _process(delta):
 	rotation_degrees += 1
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
-func _on_Area2D3_body_entered(body):
+
+func _on_Area2D_body_entered(body):
 	if body.name == "Personatge":
 		$ColorRect.color = Color(1,0,0)

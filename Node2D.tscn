@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Personatge_principal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Paret.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Paret.gd" type="Script" id=6]
 [ext_resource path="res://Fire-Flame-PNG-Image-Background.png" type="Texture" id=7]
 [ext_resource path="res://StaticBody2D.gd" type="Script" id=8]
+[ext_resource path="res://Area2Dfuego.gd" type="Script" id=9]
 
 [sub_resource type="Theme" id=1]
 
@@ -17,16 +18,19 @@ extents = Vector2( 20, 20 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 20.0249, 20.6 )
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 23.25, 15.6667 )
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 23.025, 10 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 24.125, 12.5 )
 
 [sub_resource type="PhysicsMaterial" id=5]
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 40, 32 )
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 20, 13 )
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 88, 64.8 )
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 21, 13.1 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 4 )
@@ -191,161 +195,130 @@ position = Vector2( -5.9, -0.916666 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
-[node name="Paret5" parent="." instance=ExtResource( 2 )]
+[node name="Foc" parent="." instance=ExtResource( 2 )]
 position = Vector2( 4500, 250 )
 scale = Vector2( 20, 3 )
 script = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="Paret5"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foc"]
+position = Vector2( -0.224991, 5.66666 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="Foc"]
 position = Vector2( -0.100098, -16.6667 )
 scale = Vector2( 0.041104, 0.13247 )
 texture = ExtResource( 7 )
 
-[node name="ColorRect" type="ColorRect" parent="Paret5"]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -25.0
-margin_top = -11.0
-margin_right = 24.0
-margin_bottom = 20.0
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret5"]
+[node name="Area2D" type="Area2D" parent="Foc"]
 position = Vector2( -1.5, 13 )
 scale = Vector2( 1, 1 )
-shape = SubResource( 3 )
+script = ExtResource( 9 )
 
-[node name="Area2D3" type="Area2D" parent="Paret5"]
-script = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret5/Area2D3"]
-position = Vector2( -2.39999, 5.33334 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foc/Area2D"]
+position = Vector2( 1.22501, -11.5 )
 scale = Vector2( 1, 1 )
-shape = SubResource( 2 )
+shape = SubResource( 11 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Paret5/Area2D3"]
-position = Vector2( 1.20001, 4.66666 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 4 )
-
-[node name="Paret13" parent="." instance=ExtResource( 2 )]
+[node name="Foc2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 9500, 250 )
 scale = Vector2( 20, 3 )
 script = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="Paret13"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foc2"]
+position = Vector2( -0.224991, 5.66666 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="Foc2"]
 position = Vector2( -0.100098, -16.6667 )
 scale = Vector2( 0.041104, 0.13247 )
 texture = ExtResource( 7 )
 
-[node name="ColorRect" type="ColorRect" parent="Paret13"]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -25.0
-margin_top = -11.0
-margin_right = 24.0
-margin_bottom = 20.0
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret13"]
+[node name="Area2D" type="Area2D" parent="Foc2"]
 position = Vector2( -1.5, 13 )
 scale = Vector2( 1, 1 )
-shape = SubResource( 3 )
+script = ExtResource( 9 )
 
-[node name="Area2D3" type="Area2D" parent="Paret13"]
-script = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret13/Area2D3"]
-position = Vector2( -2.39999, 5.66666 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foc2/Area2D"]
+position = Vector2( 1.22501, -11.5 )
 scale = Vector2( 1, 1 )
-shape = SubResource( 2 )
+shape = SubResource( 11 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Paret13/Area2D3"]
-position = Vector2( 1.20001, 4.66666 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 4 )
-
-[node name="Paret14" parent="." instance=ExtResource( 2 )]
+[node name="Foc3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 10000, 250 )
 scale = Vector2( 20, 3 )
 script = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="Paret14"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foc3"]
+position = Vector2( -0.224991, 5.66666 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="Foc3"]
 position = Vector2( -0.100098, -16.6667 )
 scale = Vector2( 0.041104, 0.13247 )
 texture = ExtResource( 7 )
 
-[node name="ColorRect" type="ColorRect" parent="Paret14"]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -25.0
-margin_top = -11.0
-margin_right = 24.0
-margin_bottom = 20.0
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret14"]
+[node name="Area2D" type="Area2D" parent="Foc3"]
 position = Vector2( -1.5, 13 )
 scale = Vector2( 1, 1 )
-shape = SubResource( 3 )
+script = ExtResource( 9 )
 
-[node name="Area2D3" type="Area2D" parent="Paret14"]
-script = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret14/Area2D3"]
-position = Vector2( 2.75, 4 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foc3/Area2D"]
+position = Vector2( 1.22501, -11.5 )
 scale = Vector2( 1, 1 )
-shape = SubResource( 2 )
+shape = SubResource( 11 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Paret14/Area2D3"]
-position = Vector2( 1.20001, 4.66666 )
-scale = Vector2( 1, 1 )
-shape = SubResource( 4 )
-
-[node name="Paret15" parent="." instance=ExtResource( 2 )]
+[node name="Foc4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 10500, 250 )
 scale = Vector2( 20, 3 )
 script = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="Paret15"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foc4"]
+position = Vector2( -0.224991, 5.66666 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="Foc4"]
 position = Vector2( -0.100098, -16.6667 )
 scale = Vector2( 0.041104, 0.13247 )
 texture = ExtResource( 7 )
 
-[node name="ColorRect" type="ColorRect" parent="Paret15"]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -25.0
-margin_top = -11.0
-margin_right = 24.0
-margin_bottom = 20.0
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret15"]
+[node name="Area2D" type="Area2D" parent="Foc4"]
 position = Vector2( -1.5, 13 )
 scale = Vector2( 1, 1 )
-shape = SubResource( 3 )
+script = ExtResource( 9 )
 
-[node name="Area2D3" type="Area2D" parent="Paret15"]
-script = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret15/Area2D3"]
-position = Vector2( 3.55002, 4 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foc4/Area2D"]
+position = Vector2( 1.22501, -11.5 )
 scale = Vector2( 1, 1 )
-shape = SubResource( 2 )
+shape = SubResource( 11 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Paret15/Area2D3"]
-position = Vector2( 1.20001, 4.66666 )
+[node name="Foc5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 11000, 250 )
+scale = Vector2( 20, 3 )
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foc5"]
+position = Vector2( -0.224991, 5.66666 )
 scale = Vector2( 1, 1 )
-shape = SubResource( 4 )
+shape = SubResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="Foc5"]
+position = Vector2( -0.100098, -16.6667 )
+scale = Vector2( 0.041104, 0.13247 )
+texture = ExtResource( 7 )
+
+[node name="Area2D" type="Area2D" parent="Foc5"]
+position = Vector2( -1.5, 13 )
+scale = Vector2( 1, 1 )
+script = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Foc5/Area2D"]
+position = Vector2( 1.22501, -11.5 )
+scale = Vector2( 1, 1 )
+shape = SubResource( 11 )
 
 [node name="Paret6" parent="." instance=ExtResource( 2 )]
 position = Vector2( 5497, 117 )
@@ -561,254 +534,602 @@ position = Vector2( -6.99961, 0.8 )
 scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
-[node name="Rotador" type="StaticBody2D" parent="Paret12"]
-position = Vector2( 2283, -6.3 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Girador" type="StaticBody2D" parent="."]
+position = Vector2( 11636, 0 )
+scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
 
-[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador"]
+[node name="ColorRect" type="ColorRect" parent="Girador"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 margin_left = -20.0
-margin_top = -16.0
-margin_right = 20.0
-margin_bottom = 16.0
-color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador"]
-position = Vector2( 0, -4.76837e-07 )
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 6 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador"]
+shape = SubResource( 8 )
 
-[node name="Area2D3" type="Area2D" parent="Paret12/Rotador"]
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 5 )
+[node name="Area2D" type="Area2D" parent="Girador"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador/Area2D3"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 7 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador/Area2D"]
+shape = SubResource( 9 )
 
-[node name="Rotador2" type="StaticBody2D" parent="Paret12"]
-position = Vector2( 2664, -21.2 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Girador2" type="StaticBody2D" parent="."]
+position = Vector2( 12095, -161 )
+rotation = 1.78722
+scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
 
-[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador2"]
+[node name="ColorRect" type="ColorRect" parent="Girador2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 margin_left = -20.0
-margin_top = -16.0
-margin_right = 20.0
-margin_bottom = 16.0
-color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador2"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 6 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador2"]
+shape = SubResource( 8 )
 
-[node name="Area2D3" type="Area2D" parent="Paret12/Rotador2"]
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 5 )
+[node name="Area2D" type="Area2D" parent="Girador2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador2/Area2D3"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 7 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador2/Area2D"]
+shape = SubResource( 9 )
 
-[node name="Rotador6" type="StaticBody2D" parent="Paret12"]
-position = Vector2( 3036, 11.6 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Girador3" type="StaticBody2D" parent="."]
+position = Vector2( 12620, 160 )
+rotation = -0.863938
+scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
 
-[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador6"]
+[node name="ColorRect" type="ColorRect" parent="Girador3"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 margin_left = -20.0
-margin_top = -16.0
-margin_right = 20.0
-margin_bottom = 16.0
-color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador6"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 6 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador3"]
+shape = SubResource( 8 )
 
-[node name="Area2D3" type="Area2D" parent="Paret12/Rotador6"]
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 5 )
+[node name="Area2D" type="Area2D" parent="Girador3"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador6/Area2D3"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 7 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador3/Area2D"]
+shape = SubResource( 9 )
 
-[node name="Rotador3" type="StaticBody2D" parent="Paret12"]
-position = Vector2( 3762, -1.9 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Girador4" type="StaticBody2D" parent="."]
+position = Vector2( 13062, -161 )
+rotation = -0.287979
+scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
 
-[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador3"]
+[node name="ColorRect" type="ColorRect" parent="Girador4"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 margin_left = -20.0
-margin_top = -16.0
-margin_right = 20.0
-margin_bottom = 16.0
-color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador3"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 6 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador4"]
+shape = SubResource( 8 )
 
-[node name="Area2D3" type="Area2D" parent="Paret12/Rotador3"]
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 5 )
+[node name="Area2D" type="Area2D" parent="Girador4"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador3/Area2D3"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 7 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador4/Area2D"]
+shape = SubResource( 9 )
 
-[node name="Rotador7" type="StaticBody2D" parent="Paret12"]
-position = Vector2( 3329, -31 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Girador5" type="StaticBody2D" parent="."]
+position = Vector2( 13213, 160 )
+rotation = 1.5708
+scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
 
-[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador7"]
+[node name="ColorRect" type="ColorRect" parent="Girador5"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 margin_left = -20.0
-margin_top = -16.0
-margin_right = 20.0
-margin_bottom = 16.0
-color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador7"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 6 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador5"]
+shape = SubResource( 8 )
 
-[node name="Area2D3" type="Area2D" parent="Paret12/Rotador7"]
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 5 )
+[node name="Area2D" type="Area2D" parent="Girador5"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador7/Area2D3"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 7 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador5/Area2D"]
+shape = SubResource( 9 )
 
-[node name="Rotador4" type="StaticBody2D" parent="Paret12"]
-position = Vector2( 4279, -31.1 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Girador6" type="StaticBody2D" parent="."]
+position = Vector2( 13698, 1 )
+scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
 
-[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador4"]
+[node name="ColorRect" type="ColorRect" parent="Girador6"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 margin_left = -20.0
-margin_top = -16.0
-margin_right = 20.0
-margin_bottom = 16.0
-color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador4"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 6 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador6"]
+shape = SubResource( 8 )
 
-[node name="Area2D3" type="Area2D" parent="Paret12/Rotador4"]
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 5 )
+[node name="Area2D" type="Area2D" parent="Girador6"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador4/Area2D3"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 7 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador6/Area2D"]
+shape = SubResource( 9 )
 
-[node name="Rotador9" type="StaticBody2D" parent="Paret12"]
-position = Vector2( 5071, -9.8 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Girador7" type="StaticBody2D" parent="."]
+position = Vector2( 14132, 160 )
+rotation = -0.575959
+scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
 
-[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador9"]
+[node name="ColorRect" type="ColorRect" parent="Girador7"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 margin_left = -20.0
-margin_top = -16.0
-margin_right = 20.0
-margin_bottom = 16.0
-color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador9"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 6 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador7"]
+shape = SubResource( 8 )
 
-[node name="Area2D3" type="Area2D" parent="Paret12/Rotador9"]
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 5 )
+[node name="Area2D" type="Area2D" parent="Girador7"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador9/Area2D3"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 7 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador7/Area2D"]
+shape = SubResource( 9 )
 
-[node name="Rotador8" type="StaticBody2D" parent="Paret12"]
-position = Vector2( 4401, 11.6 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Girador8" type="StaticBody2D" parent="."]
+position = Vector2( 14479, -161 )
+rotation = 1.15366
+scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
 
-[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador8"]
+[node name="ColorRect" type="ColorRect" parent="Girador8"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 margin_left = -20.0
-margin_top = -16.0
-margin_right = 20.0
-margin_bottom = 16.0
-color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador8"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 6 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador8"]
+shape = SubResource( 8 )
 
-[node name="Area2D3" type="Area2D" parent="Paret12/Rotador8"]
-scale = Vector2( 0.5, 0.5 )
-script = ExtResource( 5 )
+[node name="Area2D" type="Area2D" parent="Girador8"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador8/Area2D3"]
-scale = Vector2( 0.5, 0.5 )
-shape = SubResource( 7 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador8/Area2D"]
+shape = SubResource( 9 )
 
-[node name="Rotador5" type="StaticBody2D" parent="Paret12"]
-position = Vector2( 5589, -30.9 )
-scale = Vector2( 0.5, 0.5 )
-z_as_relative = false
+[node name="Girador10" type="StaticBody2D" parent="."]
+position = Vector2( 14943, 143 )
+scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
 
-[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador5"]
+[node name="ColorRect" type="ColorRect" parent="Girador10"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 margin_left = -20.0
-margin_top = -16.0
-margin_right = 20.0
-margin_bottom = 16.0
-color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador5"]
-scale = Vector2( 0.5, 0.5 )
-z_as_relative = false
-shape = SubResource( 6 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador10"]
+shape = SubResource( 8 )
 
-[node name="Area2D3" type="Area2D" parent="Paret12/Rotador5"]
-scale = Vector2( 0.5, 0.5 )
-z_as_relative = false
-script = ExtResource( 5 )
+[node name="Area2D" type="Area2D" parent="Girador10"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador5/Area2D3"]
-scale = Vector2( 0.5, 0.5 )
-z_as_relative = false
-shape = SubResource( 7 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador10/Area2D"]
+shape = SubResource( 9 )
 
-[node name="Rotador10" type="StaticBody2D" parent="Paret12"]
-position = Vector2( 5993, 11.4 )
-scale = Vector2( 0.5, 0.5 )
-z_as_relative = false
+[node name="Girador11" type="StaticBody2D" parent="."]
+position = Vector2( 15343, -142 )
+rotation = -0.69115
+scale = Vector2( 0.5, 10 )
 script = ExtResource( 8 )
 
-[node name="ColorRect" type="ColorRect" parent="Paret12/Rotador10"]
+[node name="ColorRect" type="ColorRect" parent="Girador11"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 margin_left = -20.0
-margin_top = -16.0
-margin_right = 20.0
-margin_bottom = 16.0
-color = Color( 0.0156863, 0.223529, 0.937255, 1 )
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador10"]
-scale = Vector2( 0.5, 0.5 )
-z_as_relative = false
-shape = SubResource( 6 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador11"]
+shape = SubResource( 8 )
 
-[node name="Area2D3" type="Area2D" parent="Paret12/Rotador10"]
-scale = Vector2( 0.5, 0.5 )
-z_as_relative = false
-script = ExtResource( 5 )
+[node name="Area2D" type="Area2D" parent="Girador11"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Rotador10/Area2D3"]
-scale = Vector2( 0.5, 0.5 )
-z_as_relative = false
-shape = SubResource( 7 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador11/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Girador12" type="StaticBody2D" parent="."]
+position = Vector2( 15874, 1 )
+rotation = 0.403171
+scale = Vector2( 0.5, 10 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Girador12"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador12"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Girador12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador12/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Girador13" type="StaticBody2D" parent="."]
+position = Vector2( 16072, 143 )
+rotation = -0.921534
+scale = Vector2( 0.5, 10 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Girador13"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador13"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Girador13"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador13/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Girador14" type="StaticBody2D" parent="."]
+position = Vector2( 16592, -97 )
+rotation = -2.24798
+scale = Vector2( 0.5, 10 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Girador14"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador14"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Girador14"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador14/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Girador15" type="StaticBody2D" parent="."]
+position = Vector2( 17012, 143 )
+rotation = -3.05433
+scale = Vector2( 0.5, 10 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Girador15"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador15"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Girador15"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador15/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Girador16" type="StaticBody2D" parent="."]
+position = Vector2( 17481, -164 )
+rotation = -0.961676
+scale = Vector2( 0.5, 10 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Girador16"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador16"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Girador16"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador16/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Girador17" type="StaticBody2D" parent="."]
+position = Vector2( 17840, 162 )
+rotation = 5.02829
+scale = Vector2( 0.5, 10 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Girador17"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador17"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Girador17"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador17/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Girador18" type="StaticBody2D" parent="."]
+position = Vector2( 18249, 162 )
+rotation = 0.921534
+scale = Vector2( 0.5, 10 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Girador18"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador18"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Girador18"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador18/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Girador19" type="StaticBody2D" parent="."]
+position = Vector2( 18717, 162 )
+rotation = -0.748746
+scale = Vector2( 0.5, 10 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Girador19"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador19"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Girador19"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador19/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Girador20" type="StaticBody2D" parent="."]
+position = Vector2( 18498, -130 )
+rotation = 1.21126
+scale = Vector2( 0.5, 10 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Girador20"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador20"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Girador20"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador20/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Girador21" type="StaticBody2D" parent="."]
+position = Vector2( 19214, -142 )
+rotation = 3.40165
+scale = Vector2( 0.5, 10 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Girador21"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador21"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Girador21"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador21/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Girador22" type="StaticBody2D" parent="."]
+position = Vector2( 19747, 143 )
+rotation = -1.34739
+scale = Vector2( 0.5, 10 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Girador22"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador22"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Girador22"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador22/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Girador23" type="StaticBody2D" parent="."]
+position = Vector2( 20264, -142 )
+rotation = 0.591667
+scale = Vector2( 0.5, 10 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Girador23"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador23"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Girador23"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador23/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Girador24" type="StaticBody2D" parent="."]
+position = Vector2( 20634, 143 )
+rotation = -1.09607
+scale = Vector2( 0.5, 10 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Girador24"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador24"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Girador24"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador24/Area2D"]
+shape = SubResource( 9 )
+
+[node name="Girador25" type="StaticBody2D" parent="."]
+position = Vector2( 21121, 1 )
+rotation = 0.345575
+scale = Vector2( 0.5, 10 )
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Girador25"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -13.0
+margin_right = 11.0
+margin_bottom = 8.0
+rect_scale = Vector2( 1.30201, 1.23952 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador25"]
+shape = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="Girador25"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Girador25/Area2D"]
+shape = SubResource( 9 )
 
 [connection signal="area_entered" from="Paret/Area2D3" to="Paret/Area2D3" method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="Paret/Area2D3" to="." method="_on_Area2D3_body_entered"]
@@ -830,26 +1151,16 @@ shape = SubResource( 7 )
 [connection signal="body_entered" from="Paret4/Area2D3" to="Paret4" method="_on_Area2D3_body_entered"]
 [connection signal="body_entered" from="Paret4/Area2D3" to="Paret4/Area2D3" method="_on_Area2D2_body_entered"]
 [connection signal="body_exited" from="Paret4/Area2D3" to="Paret4/Area2D3" method="_on_Area2D2_body_exited"]
-[connection signal="area_entered" from="Paret5/Area2D3" to="Paret5/Area2D3" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Paret5/Area2D3" to="." method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret5/Area2D3" to="Paret5" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret5/Area2D3" to="Paret5/Area2D3" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Paret5/Area2D3" to="Paret5/Area2D3" method="_on_Area2D2_body_exited"]
-[connection signal="area_entered" from="Paret13/Area2D3" to="Paret13/Area2D3" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Paret13/Area2D3" to="." method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret13/Area2D3" to="Paret13" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret13/Area2D3" to="Paret13/Area2D3" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Paret13/Area2D3" to="Paret13/Area2D3" method="_on_Area2D2_body_exited"]
-[connection signal="area_entered" from="Paret14/Area2D3" to="Paret14/Area2D3" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Paret14/Area2D3" to="." method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret14/Area2D3" to="Paret14" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret14/Area2D3" to="Paret14/Area2D3" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Paret14/Area2D3" to="Paret14/Area2D3" method="_on_Area2D2_body_exited"]
-[connection signal="area_entered" from="Paret15/Area2D3" to="Paret15/Area2D3" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Paret15/Area2D3" to="." method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret15/Area2D3" to="Paret15" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret15/Area2D3" to="Paret15/Area2D3" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Paret15/Area2D3" to="Paret15/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="body_entered" from="Foc/Area2D" to="." method="_on_Area2D_foc_body_entered"]
+[connection signal="body_entered" from="Foc/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Foc2/Area2D" to="." method="_on_Area2D_foc_body_entered"]
+[connection signal="body_entered" from="Foc2/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Foc3/Area2D" to="." method="_on_Area2D_foc_body_entered"]
+[connection signal="body_entered" from="Foc3/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Foc4/Area2D" to="." method="_on_Area2D_foc_body_entered"]
+[connection signal="body_entered" from="Foc4/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Foc5/Area2D" to="." method="_on_Area2D_foc_body_entered"]
+[connection signal="body_entered" from="Foc5/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="area_entered" from="Paret6/Area2D3" to="Paret6/Area2D3" method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="Paret6/Area2D3" to="." method="_on_Area2D3_body_entered"]
 [connection signal="body_entered" from="Paret6/Area2D3" to="Paret6" method="_on_Area2D3_body_entered"]
@@ -885,63 +1196,51 @@ shape = SubResource( 7 )
 [connection signal="body_entered" from="Paret12/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
 [connection signal="body_entered" from="Paret12/Area2D3" to="Paret12/Area2D3" method="_on_Area2D2_body_entered"]
 [connection signal="body_exited" from="Paret12/Area2D3" to="Paret12/Area2D3" method="_on_Area2D2_body_exited"]
-[connection signal="area_entered" from="Paret12/Rotador/Area2D3" to="Paret12/Rotador/Area2D3" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Paret12/Rotador/Area2D3" to="." method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador/Area2D3" to="Paret12/Rotador" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador/Area2D3" to="Paret12/Rotador/Area2D3" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Paret12/Rotador/Area2D3" to="Paret12/Rotador/Area2D3" method="_on_Area2D2_body_exited"]
-[connection signal="area_entered" from="Paret12/Rotador2/Area2D3" to="Paret12/Rotador2/Area2D3" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Paret12/Rotador2/Area2D3" to="." method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador2/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador2/Area2D3" to="Paret12/Rotador2" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador2/Area2D3" to="Paret12/Rotador2/Area2D3" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Paret12/Rotador2/Area2D3" to="Paret12/Rotador2/Area2D3" method="_on_Area2D2_body_exited"]
-[connection signal="area_entered" from="Paret12/Rotador6/Area2D3" to="Paret12/Rotador6/Area2D3" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Paret12/Rotador6/Area2D3" to="." method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador6/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador6/Area2D3" to="Paret12/Rotador6" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador6/Area2D3" to="Paret12/Rotador6/Area2D3" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Paret12/Rotador6/Area2D3" to="Paret12/Rotador6/Area2D3" method="_on_Area2D2_body_exited"]
-[connection signal="area_entered" from="Paret12/Rotador3/Area2D3" to="Paret12/Rotador3/Area2D3" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Paret12/Rotador3/Area2D3" to="." method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador3/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador3/Area2D3" to="Paret12/Rotador3" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador3/Area2D3" to="Paret12/Rotador3/Area2D3" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Paret12/Rotador3/Area2D3" to="Paret12/Rotador3/Area2D3" method="_on_Area2D2_body_exited"]
-[connection signal="area_entered" from="Paret12/Rotador7/Area2D3" to="Paret12/Rotador7/Area2D3" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Paret12/Rotador7/Area2D3" to="." method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador7/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador7/Area2D3" to="Paret12/Rotador7" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador7/Area2D3" to="Paret12/Rotador7/Area2D3" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Paret12/Rotador7/Area2D3" to="Paret12/Rotador7/Area2D3" method="_on_Area2D2_body_exited"]
-[connection signal="area_entered" from="Paret12/Rotador4/Area2D3" to="Paret12/Rotador4/Area2D3" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Paret12/Rotador4/Area2D3" to="." method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador4/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador4/Area2D3" to="Paret12/Rotador4" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador4/Area2D3" to="Paret12/Rotador4/Area2D3" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Paret12/Rotador4/Area2D3" to="Paret12/Rotador4/Area2D3" method="_on_Area2D2_body_exited"]
-[connection signal="area_entered" from="Paret12/Rotador9/Area2D3" to="Paret12/Rotador9/Area2D3" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Paret12/Rotador9/Area2D3" to="." method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador9/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador9/Area2D3" to="Paret12/Rotador9" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador9/Area2D3" to="Paret12/Rotador9/Area2D3" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Paret12/Rotador9/Area2D3" to="Paret12/Rotador9/Area2D3" method="_on_Area2D2_body_exited"]
-[connection signal="area_entered" from="Paret12/Rotador8/Area2D3" to="Paret12/Rotador8/Area2D3" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Paret12/Rotador8/Area2D3" to="." method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador8/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador8/Area2D3" to="Paret12/Rotador8" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador8/Area2D3" to="Paret12/Rotador8/Area2D3" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Paret12/Rotador8/Area2D3" to="Paret12/Rotador8/Area2D3" method="_on_Area2D2_body_exited"]
-[connection signal="area_entered" from="Paret12/Rotador5/Area2D3" to="Paret12/Rotador5/Area2D3" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Paret12/Rotador5/Area2D3" to="." method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador5/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador5/Area2D3" to="Paret12/Rotador5" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador5/Area2D3" to="Paret12/Rotador5/Area2D3" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Paret12/Rotador5/Area2D3" to="Paret12/Rotador5/Area2D3" method="_on_Area2D2_body_exited"]
-[connection signal="area_entered" from="Paret12/Rotador10/Area2D3" to="Paret12/Rotador10/Area2D3" method="_on_Area2D_area_entered"]
-[connection signal="body_entered" from="Paret12/Rotador10/Area2D3" to="." method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador10/Area2D3" to="Paret12" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador10/Area2D3" to="Paret12/Rotador10" method="_on_Area2D3_body_entered"]
-[connection signal="body_entered" from="Paret12/Rotador10/Area2D3" to="Paret12/Rotador10/Area2D3" method="_on_Area2D2_body_entered"]
-[connection signal="body_exited" from="Paret12/Rotador10/Area2D3" to="Paret12/Rotador10/Area2D3" method="_on_Area2D2_body_exited"]
+[connection signal="body_entered" from="Girador/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador/Area2D" to="Girador" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador2/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador2/Area2D" to="Girador2" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador3/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador3/Area2D" to="Girador3" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador4/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador4/Area2D" to="Girador4" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador5/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador5/Area2D" to="Girador5" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador6/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador6/Area2D" to="Girador6" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador7/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador7/Area2D" to="Girador7" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador8/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador8/Area2D" to="Girador8" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador10/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador10/Area2D" to="Girador10" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador11/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador11/Area2D" to="Girador11" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador12/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador12/Area2D" to="Girador12" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador13/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador13/Area2D" to="Girador13" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador14/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador14/Area2D" to="Girador14" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador15/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador15/Area2D" to="Girador15" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador16/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador16/Area2D" to="Girador16" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador17/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador17/Area2D" to="Girador17" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador18/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador18/Area2D" to="Girador18" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador19/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador19/Area2D" to="Girador19" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador20/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador20/Area2D" to="Girador20" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador21/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador21/Area2D" to="Girador21" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador22/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador22/Area2D" to="Girador22" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador23/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador23/Area2D" to="Girador23" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador24/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador24/Area2D" to="Girador24" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador25/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Girador25/Area2D" to="Girador25" method="_on_Area2D_body_entered"]

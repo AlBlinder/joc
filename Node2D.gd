@@ -12,7 +12,7 @@ func _ready():
 
 func _process(delta):
 
-	if vides == 0:
+	if vides <= 0:
 		$Personatge.position = Vector2(0,0)
 		vides = 5
 	$vides.text = "vides: " + str(vides)
@@ -22,3 +22,13 @@ func _process(delta):
 func _on_Area2D3_body_entered(body):
 	if body.name == "Personatge":
 		vides -=1
+
+
+func _on_Area2D_body_entered(body):
+	if body.name == "Personatge":
+		vides -=1
+
+
+func _on_Area2D_foc_body_entered(body):
+	if body.name == "Personatge":
+		vides = 0
