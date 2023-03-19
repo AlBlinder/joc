@@ -2,6 +2,7 @@ extends Node2D
 
 var vides = 5
 var meta = 0
+var contador = 0
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -16,6 +17,8 @@ func _process(delta):
 	if vides <= 0:
 		$Personatge.position = Vector2(0,0)
 		vides = 5
+		contador += 1
+	$Contador.text = "Intent número... " + str(contador)
 	$vides.text = "vides: " + str(vides)
 	$vides.rect_position = $Personatge.position*Vector2.RIGHT + Vector2(-300, -300)
 
