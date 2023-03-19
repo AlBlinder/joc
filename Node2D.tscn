@@ -102,7 +102,6 @@ margin_bottom = 19.6
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Paret"]
@@ -110,7 +109,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paret/Area2D3"]
 position = Vector2( -5.32492, 1.2 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Paret2" parent="." instance=ExtResource( 2 )]
@@ -131,7 +129,6 @@ margin_bottom = 19.6
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret2"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Paret2"]
@@ -139,7 +136,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paret2/Area2D3"]
 position = Vector2( -6.16132, -0.834324 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Paret3" parent="." instance=ExtResource( 2 )]
@@ -159,7 +155,6 @@ margin_bottom = 19.6
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret3"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Paret3"]
@@ -167,7 +162,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paret3/Area2D3"]
 position = Vector2( -5.44999, 1.2 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Paret4" parent="." instance=ExtResource( 2 )]
@@ -187,7 +181,6 @@ margin_bottom = 19.6
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret4"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Paret4"]
@@ -195,7 +188,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paret4/Area2D3"]
 position = Vector2( -5.9, -0.916666 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Foc" parent="." instance=ExtResource( 2 )]
@@ -205,7 +197,6 @@ script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foc"]
 position = Vector2( -0.224991, 5.66666 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="Foc"]
@@ -215,12 +206,10 @@ texture = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="Foc"]
 position = Vector2( -1.5, 13 )
-scale = Vector2( 1, 1 )
 script = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foc/Area2D"]
 position = Vector2( 1.89999, -11 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 11 )
 
 [node name="Foc2" parent="." instance=ExtResource( 2 )]
@@ -230,7 +219,6 @@ script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foc2"]
 position = Vector2( -0.224991, 5.66666 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="Foc2"]
@@ -240,12 +228,10 @@ texture = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="Foc2"]
 position = Vector2( -1.5, 13 )
-scale = Vector2( 1, 1 )
 script = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foc2/Area2D"]
 position = Vector2( 1.22501, -11.5 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 11 )
 
 [node name="Foc3" parent="." instance=ExtResource( 2 )]
@@ -255,7 +241,6 @@ script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foc3"]
 position = Vector2( -0.224991, 5.66666 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="Foc3"]
@@ -265,12 +250,10 @@ texture = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="Foc3"]
 position = Vector2( -1.5, 13 )
-scale = Vector2( 1, 1 )
 script = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foc3/Area2D"]
 position = Vector2( 1.22501, -11.5 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 11 )
 
 [node name="Foc4" parent="." instance=ExtResource( 2 )]
@@ -280,7 +263,6 @@ script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foc4"]
 position = Vector2( -0.224991, 5.66666 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="Foc4"]
@@ -290,12 +272,10 @@ texture = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="Foc4"]
 position = Vector2( -1.5, 13 )
-scale = Vector2( 1, 1 )
 script = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foc4/Area2D"]
 position = Vector2( 1.22501, -11.5 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 11 )
 
 [node name="Foc5" parent="." instance=ExtResource( 2 )]
@@ -305,7 +285,6 @@ script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foc5"]
 position = Vector2( -0.224991, 5.66666 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 10 )
 
 [node name="Sprite" type="Sprite" parent="Foc5"]
@@ -315,12 +294,10 @@ texture = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="Foc5"]
 position = Vector2( -1.5, 13 )
-scale = Vector2( 1, 1 )
 script = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Foc5/Area2D"]
 position = Vector2( 1.22501, -11.5 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 11 )
 
 [node name="Paret6" parent="." instance=ExtResource( 2 )]
@@ -340,7 +317,6 @@ margin_bottom = 19.6
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret6"]
 position = Vector2( -5.15, 0 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Paret6"]
@@ -348,7 +324,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paret6/Area2D3"]
 position = Vector2( -5.54998, 0.916667 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Paret7" parent="." instance=ExtResource( 2 )]
@@ -371,7 +346,6 @@ margin_bottom = 19.6
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret7"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Paret7"]
@@ -379,7 +353,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paret7/Area2D3"]
 position = Vector2( -8.0001, -0.799999 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Paret9" parent="." instance=ExtResource( 2 )]
@@ -402,7 +375,6 @@ margin_bottom = 19.6
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret9"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Paret9"]
@@ -410,7 +382,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paret9/Area2D3"]
 position = Vector2( -7.0001, -0.7 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Paret11" parent="." instance=ExtResource( 2 )]
@@ -433,7 +404,6 @@ margin_bottom = 19.6
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret11"]
 position = Vector2( -5, 0.0447693 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Paret11"]
@@ -441,7 +411,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paret11/Area2D3"]
 position = Vector2( -6.99961, -0.7 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Paret8" parent="." instance=ExtResource( 2 )]
@@ -464,7 +433,6 @@ margin_bottom = 19.6
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret8"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Paret8"]
@@ -472,7 +440,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paret8/Area2D3"]
 position = Vector2( -8.0001, 0.800001 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Paret10" parent="." instance=ExtResource( 2 )]
@@ -495,7 +462,6 @@ margin_bottom = 19.6
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret10"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Paret10"]
@@ -503,7 +469,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paret10/Area2D3"]
 position = Vector2( -6.0001, 0.8 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Paret12" parent="." instance=ExtResource( 2 )]
@@ -526,7 +491,6 @@ margin_bottom = 19.6
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paret12"]
 position = Vector2( -5, -0.0895424 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Paret12"]
@@ -534,7 +498,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paret12/Area2D3"]
 position = Vector2( -7, 0.698743 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Girador" type="StaticBody2D" parent="."]
@@ -808,7 +771,6 @@ shape = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Girador12/Area2D"]
 position = Vector2( 0, 0.0153809 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 9 )
 
 [node name="Girador13" type="StaticBody2D" parent="."]
@@ -861,7 +823,6 @@ shape = SubResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Girador14/Area2D"]
 position = Vector2( -0.326172, 0.00012207 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 9 )
 
 [node name="Girador15" type="StaticBody2D" parent="."]
@@ -1161,7 +1122,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo"]
 position = Vector2( -5, -0.215088 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo"]
@@ -1169,7 +1129,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo/Area2D3"]
 position = Vector2( -5.58679, 0.0665283 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo19" parent="." instance=ExtResource( 2 )]
@@ -1194,7 +1153,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo19"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo19"]
@@ -1202,7 +1160,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo19/Area2D3"]
 position = Vector2( -5.08374, -0.310059 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo20" parent="." instance=ExtResource( 2 )]
@@ -1227,7 +1184,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo20"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo20"]
@@ -1235,7 +1191,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo20/Area2D3"]
 position = Vector2( -5.57324, 0.0866699 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo37" parent="." instance=ExtResource( 2 )]
@@ -1260,7 +1215,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo37"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo37"]
@@ -1268,7 +1222,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo37/Area2D3"]
 position = Vector2( -5.57324, 0.0866699 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo42" parent="." instance=ExtResource( 2 )]
@@ -1293,7 +1246,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo42"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo42"]
@@ -1301,7 +1253,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo42/Area2D3"]
 position = Vector2( -5.57324, 0.0866699 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo43" parent="." instance=ExtResource( 2 )]
@@ -1326,7 +1277,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo43"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo43"]
@@ -1334,7 +1284,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo43/Area2D3"]
 position = Vector2( -5.57324, 0.0866699 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo45" parent="." instance=ExtResource( 2 )]
@@ -1359,7 +1308,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo45"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo45"]
@@ -1367,7 +1315,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo45/Area2D3"]
 position = Vector2( -5.57324, 0.0866699 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo47" parent="." instance=ExtResource( 2 )]
@@ -1392,7 +1339,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo47"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo47"]
@@ -1400,7 +1346,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo47/Area2D3"]
 position = Vector2( -5.57324, 0.0866699 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo49" parent="." instance=ExtResource( 2 )]
@@ -1425,7 +1370,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo49"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo49"]
@@ -1433,7 +1377,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo49/Area2D3"]
 position = Vector2( -5.57324, 0.0866699 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo50" parent="." instance=ExtResource( 2 )]
@@ -1458,7 +1401,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo50"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo50"]
@@ -1466,7 +1408,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo50/Area2D3"]
 position = Vector2( -5.57324, 0.0866699 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo53" parent="." instance=ExtResource( 2 )]
@@ -1491,7 +1432,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo53"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo53"]
@@ -1499,7 +1439,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo53/Area2D3"]
 position = Vector2( -5.57324, 0.0866699 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo22" parent="." instance=ExtResource( 2 )]
@@ -1524,7 +1463,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo22"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo22"]
@@ -1532,7 +1470,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo22/Area2D3"]
 position = Vector2( -5.68127, 0.0683594 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo23" parent="." instance=ExtResource( 2 )]
@@ -1557,7 +1494,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo23"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo23"]
@@ -1565,7 +1501,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo23/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo24" parent="." instance=ExtResource( 2 )]
@@ -1590,7 +1525,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo24"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo24"]
@@ -1598,7 +1532,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo24/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo25" parent="." instance=ExtResource( 2 )]
@@ -1623,7 +1556,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo25"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo25"]
@@ -1631,7 +1563,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo25/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo26" parent="." instance=ExtResource( 2 )]
@@ -1656,7 +1587,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo26"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo26"]
@@ -1664,7 +1594,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo26/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo27" parent="." instance=ExtResource( 2 )]
@@ -1689,7 +1618,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo27"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo27"]
@@ -1697,7 +1625,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo27/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo28" parent="." instance=ExtResource( 2 )]
@@ -1722,7 +1649,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo28"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo28"]
@@ -1730,7 +1656,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo28/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo29" parent="." instance=ExtResource( 2 )]
@@ -1755,7 +1680,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo29"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo29"]
@@ -1763,7 +1687,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo29/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo30" parent="." instance=ExtResource( 2 )]
@@ -1788,7 +1711,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo30"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo30"]
@@ -1796,7 +1718,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo30/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo3" parent="." instance=ExtResource( 2 )]
@@ -1821,7 +1742,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo3"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo3"]
@@ -1829,7 +1749,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo3/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo4" parent="." instance=ExtResource( 2 )]
@@ -1854,7 +1773,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo4"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo4"]
@@ -1862,7 +1780,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo4/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo5" parent="." instance=ExtResource( 2 )]
@@ -1887,7 +1804,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo5"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo5"]
@@ -1895,7 +1811,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo5/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo6" parent="." instance=ExtResource( 2 )]
@@ -1920,7 +1835,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo6"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo6"]
@@ -1928,7 +1842,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo6/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo8" parent="." instance=ExtResource( 2 )]
@@ -1953,7 +1866,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo8"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo8"]
@@ -1961,7 +1873,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo8/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo9" parent="." instance=ExtResource( 2 )]
@@ -1986,7 +1897,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo9"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo9"]
@@ -1994,7 +1904,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo9/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo10" parent="." instance=ExtResource( 2 )]
@@ -2019,7 +1928,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo10"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo10"]
@@ -2027,7 +1935,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo10/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo11" parent="." instance=ExtResource( 2 )]
@@ -2052,7 +1959,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo11"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo11"]
@@ -2060,7 +1966,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo11/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo12" parent="." instance=ExtResource( 2 )]
@@ -2085,7 +1990,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo12"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo12"]
@@ -2093,7 +1997,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo12/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo13" parent="." instance=ExtResource( 2 )]
@@ -2118,7 +2021,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo13"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo13"]
@@ -2126,7 +2028,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo13/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo14" parent="." instance=ExtResource( 2 )]
@@ -2151,7 +2052,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo14"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo14"]
@@ -2159,7 +2059,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo14/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo15" parent="." instance=ExtResource( 2 )]
@@ -2184,7 +2083,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo15"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo15"]
@@ -2192,7 +2090,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo15/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo16" parent="." instance=ExtResource( 2 )]
@@ -2217,7 +2114,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo16"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo16"]
@@ -2225,7 +2121,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo16/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo17" parent="." instance=ExtResource( 2 )]
@@ -2250,7 +2145,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo17"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo17"]
@@ -2258,7 +2152,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo17/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo2" parent="." instance=ExtResource( 2 )]
@@ -2283,7 +2176,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo2"]
 position = Vector2( -4.88647, -0.0360107 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo2"]
@@ -2291,7 +2183,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo2/Area2D3"]
 position = Vector2( -5.30139, 0.0467529 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo7" parent="." instance=ExtResource( 2 )]
@@ -2316,7 +2207,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo7"]
 position = Vector2( -4.93921, -0.000244141 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo7"]
@@ -2324,7 +2214,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo7/Area2D3"]
 position = Vector2( -5.45874, -0.0212402 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo18" parent="." instance=ExtResource( 2 )]
@@ -2349,7 +2238,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo18"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo18"]
@@ -2357,7 +2245,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo18/Area2D3"]
 position = Vector2( -5.52222, 0.1521 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo21" parent="." instance=ExtResource( 2 )]
@@ -2382,7 +2269,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo21"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo21"]
@@ -2390,7 +2276,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo21/Area2D3"]
 position = Vector2( -5.6814, 0.127075 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo31" parent="." instance=ExtResource( 2 )]
@@ -2415,7 +2300,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo31"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo31"]
@@ -2423,7 +2307,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo31/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo32" parent="." instance=ExtResource( 2 )]
@@ -2448,7 +2331,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo32"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo32"]
@@ -2456,7 +2338,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo32/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo35" parent="." instance=ExtResource( 2 )]
@@ -2481,7 +2362,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo35"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo35"]
@@ -2489,7 +2369,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo35/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo36" parent="." instance=ExtResource( 2 )]
@@ -2514,7 +2393,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo36"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo36"]
@@ -2522,7 +2400,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo36/Area2D3"]
 position = Vector2( -5.68164, -0.0688477 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo38" parent="." instance=ExtResource( 2 )]
@@ -2547,7 +2424,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo38"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo38"]
@@ -2555,7 +2431,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo38/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo39" parent="." instance=ExtResource( 2 )]
@@ -2580,7 +2455,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo39"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo39"]
@@ -2588,7 +2462,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo39/Area2D3"]
 position = Vector2( -5.68164, -0.0688477 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo40" parent="." instance=ExtResource( 2 )]
@@ -2613,7 +2486,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo40"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo40"]
@@ -2621,7 +2493,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo40/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo41" parent="." instance=ExtResource( 2 )]
@@ -2646,7 +2517,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo41"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo41"]
@@ -2654,7 +2524,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo41/Area2D3"]
 position = Vector2( -5.68164, -0.0688477 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo44" parent="." instance=ExtResource( 2 )]
@@ -2679,7 +2548,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo44"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo44"]
@@ -2687,7 +2555,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo44/Area2D3"]
 position = Vector2( -5.68164, -0.0688477 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo46" parent="." instance=ExtResource( 2 )]
@@ -2712,7 +2579,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo46"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo46"]
@@ -2720,7 +2586,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo46/Area2D3"]
 position = Vector2( -5.68164, -0.0688477 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo51" parent="." instance=ExtResource( 2 )]
@@ -2745,7 +2610,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo51"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo51"]
@@ -2753,7 +2617,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo51/Area2D3"]
 position = Vector2( -5.68164, -0.0688477 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo52" parent="." instance=ExtResource( 2 )]
@@ -2778,7 +2641,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo52"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo52"]
@@ -2786,7 +2648,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo52/Area2D3"]
 position = Vector2( -5.68164, -0.0688477 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo48" parent="." instance=ExtResource( 2 )]
@@ -2811,7 +2672,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo48"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo48"]
@@ -2819,7 +2679,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo48/Area2D3"]
 position = Vector2( -5.68164, -0.0688477 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo33" parent="." instance=ExtResource( 2 )]
@@ -2844,7 +2703,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo33"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo33"]
@@ -2852,7 +2710,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo33/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Pinxo34" parent="." instance=ExtResource( 2 )]
@@ -2877,7 +2734,6 @@ color = Color( 0, 0, 0, 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Pinxo34"]
 position = Vector2( -5, -3.8147e-06 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 3 )
 
 [node name="Area2D3" type="Area2D" parent="Pinxo34"]
@@ -2885,7 +2741,6 @@ script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinxo34/Area2D3"]
 position = Vector2( -5.6814, 0.207275 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -2901,7 +2756,6 @@ color = Color( 0.0313726, 0.945098, 0, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -0.000976562, 1.49012e-08 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 12 )
 
 [node name="meta" type="Label" parent="."]
